@@ -3,27 +3,50 @@
 	<head>
 		<title>JavaJam Coffe House</title>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
-		<header>
-			<h1>JavaJam Coffe House</h1>
-		</header>
-		<nav>
-			<b>
-				<a href="index.html">Home</a> &nbsp; <a href="menu.html">Menu</a> &nbsp;
-				<a href="music.html">Music</a> &nbsp; <a href="jobs.html">Jobs</a>
-			</b>
-		</nav>
-		<div>
-			<h3>Jobs</h3>
-			<p>Opening soon ...</p>
+		<div id="most-outer-wrapper">
+			<header>
+				<img class="center" src="./img/header.jpg" alt="JCH" />
+			</header>
+			<div class="parent_flex">
+				<nav class="small_child">
+					<a href="index.html">Home</a>
+					<a href="menu.html">Menu</a>
+					<a href="music.html">Music</a>
+					<a href="jobs.html">Jobs</a>
+				</nav>
+				<div class="big_child">
+					<div style="display: block; max-width: fit-content">
+						<h2>Music at JavaJam</h2>
+						<p>
+							Want to work at JavaJam? Fill out the form below to start your
+							application. Required fields are marked with an asterisk *
+						</p>
+					</div>
+
+					<form class="job-application" action="show_post.php">
+						<label>*Name:</label>
+						<input type="text" name="name" required />
+						<label>*E-Mail:</label>
+						<input type="email" name="email" required />
+						<label for="myDate">Start Date:</label>
+						<input type="date" name="myDate" id="myDateid" />
+						<label>*Experience:</label>
+						<textarea name="experience" required></textarea>
+						<input type="reset" />
+						<input type="submit" value="Apply now" />
+					</form>
+				</div>
+			</div>
+			<footer>
+				<small><i>Copyright &copy; 2014 JavaJam Coffe House</i></small>
+				<br />
+				<small>
+					<i><a href="viet@le.com"> viet@le.com </a></i>
+				</small>
+			</footer>
 		</div>
-		<footer>
-			<small><i>Copyright &copy; 2014 JavaJam Coffe House</i></small>
-			<br />
-			<small>
-				<i><a href="viet@le.com"> viet@le.com </a></i>
-			</small>
-		</footer>
 	</body>
 </html>
