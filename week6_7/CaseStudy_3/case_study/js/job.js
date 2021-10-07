@@ -10,17 +10,14 @@ function check_input() {
 	var today = new Date();
 	today.setHours(0, 0, 0, 0);
 
-	if (
-		email_regex.test(received_email) &
-		name_regex.test(received_name) &
-		(today <= chosen_date)
-	) {
-		return true;
-	}
-	alert(
-		String(email_regex.test(received_email)) +
-			String(name_regex.test(received_name)) +
-			String(today <= chosen_date)
-	);
+	var error_message = "";
+
+	if (!email_regex.test(received_email)) error_message += "Email is wrong format \n";
+	if (!name_regex.test(received_name)) error_message += "Name is wrong format \n";
+	if (!(today <= chosen_date)) error_message += "Chosen date must be latter";
+
+	if (error_message == "") return true;
+
+	alert(error_message);
 	return false;
 }
