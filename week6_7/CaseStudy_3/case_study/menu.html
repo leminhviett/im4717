@@ -22,6 +22,7 @@
 					<a href="menu.html">Menu</a>
 					<a href="music.html">Music</a>
 					<a href="jobs.html">Jobs</a>
+					<a href="update.html">Update Price</a>
 				</nav>
 				<div class="big_child">
 					<h2>Coffee at JavaJam</h2>
@@ -52,15 +53,7 @@
 								>
 							</td>
 							<td>
-								<textarea
-									id="sub_tot_1"
-									name="sub_tot_1"
-									rows="2"
-									cols="4"
-									readonly
-								>
-0</textarea
-								>
+								<span id="sub_tot_1" name="sub_tot_1"> 0</span>
 							</td>
 						</tr>
 						<tr>
@@ -89,15 +82,7 @@
 								>
 							</td>
 							<td>
-								<textarea
-									id="sub_tot_2"
-									name="sub_tot_2"
-									rows="2"
-									cols="4"
-									readonly
-								>
-0</textarea
-								>
+								<span id="sub_tot_2" name="sub_tot_2"> 0</span>
 							</td>
 						</tr>
 						<tr>
@@ -132,24 +117,28 @@
 								>
 							</td>
 							<td>
-								<textarea
-									id="sub_tot_3"
-									name="sub_tot_3"
-									rows="2"
-									cols="4"
-									readonly
-								>
-0</textarea
-								>
+								<span id="sub_tot_3" name="sub_tot_3"> 0</span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+
+							<td>
+								<button onclick="calculate_price()">Submit</button>
+							</td>
+							<td style="display: inline; float: right">
+								<p style="display: inline; font-weight: bold">Total</p>
+								<span id="total" name="total">0</span>
 							</td>
 						</tr>
 					</table>
-					<br />
+					<!-- <br />
 					<button onclick="calculate_price()">Submit</button>
 					<div style="display: inline; float: right">
 						<p style="display: inline">Total:</p>
-						<textarea id="total" name="total" rows="2" cols="4" readonly>0</textarea>
-					</div>
+						<span id="total" name="total">0</span>
+					</div> -->
 				</div>
 			</div>
 			<footer>

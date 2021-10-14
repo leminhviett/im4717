@@ -38,3 +38,5 @@ insert into sales values
 
     (3, 150, 'DOUB',1000, '2021-10-13');
 
+    // select sum(revenue), product_id, date from sales WHERE DATE(date) = CURDATE() group by product_id order by sum(revenue);
+    // select sum(quantity), type as category from sales WHERE DATE(date) = CURDATE() group by type order by sum(quantity);
