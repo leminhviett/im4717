@@ -10,7 +10,7 @@
         exit;
      }
 
-     if ($_POST["query_1"] == "query_1") {
+     if (isset($_POST["query_1"])) {
         $query = "select sum(revenue) as total_rev, product_id, date from sales WHERE DATE(date) = CURDATE() group by product_id order by sum(revenue)";
         $result = $db->query($query);
         
@@ -31,7 +31,7 @@
         }
      }
 
-     if ($_POST["query_2"] == "query_2") {
+     if (isset($_POST["query_2"])) {
         $query = "select sum(quantity) as quantity, type as category from sales WHERE DATE(date) = CURDATE() group by type order by sum(quantity)";
         $result = $db->query($query);
         
